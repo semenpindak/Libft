@@ -6,15 +6,20 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2019/10/25 19:02:57 by calpha           ###   ########.fr       */
+/*   Updated: 2020/03/01 16:51:18 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 10
+# define FD 10240
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 typedef struct		s_list
 {
@@ -22,6 +27,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_node
+{
+	int				fd;
+	char			*buff;
+	struct	s_node	*next;
+}					t_node;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -87,4 +99,5 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 char				*ft_itoa_base(int value, int base);
 int					ft_atoi_base(char *str, char *base);
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
+int					get_next_line(const int fd, char **line);
 #endif

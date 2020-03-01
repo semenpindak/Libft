@@ -1,4 +1,5 @@
-NAME = libft.a
+PROGRAM = libft.a
+CFLAGS:= -Wall -Wextra -Werror
 SRCS:= ft_memchr.c	ft_putstr.c	ft_strjoin.c ft_strsplit.c\
 ft_memcmp.c	ft_putstr_fd.c ft_strlcat.c	ft_strstr.c\
 ft_atoi.c ft_memcpy.c ft_strcat.c ft_strlen.c ft_strsub.c\
@@ -11,22 +12,26 @@ ft_strdup.c	ft_strnequ.c ft_itoa.c ft_putendl_fd.c ft_strequ.c ft_strnew.c\
 ft_memalloc.c ft_putnbr.c ft_striter.c ft_strnstr.c ft_memccpy.c\
 ft_putnbr_fd.c ft_striteri.c ft_strrchr.c\
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
-ft_itoa_base.c ft_atoi_base.c ft_strlcpy.c ft_strcasecmp.c ft_convert_base.c
-OBJ:= $(patsubst %.c,%.o,$(SRCS))
+ft_itoa_base.c ft_atoi_base.c ft_strlcpy.c ft_strcasecmp.c ft_convert_base.c\
+get_next_line.c
+OBJ = $(SRCS:c=o)
 
-all : $(NAME)
+.PHONY: all clean fclean re
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $^
-	ranlib $(NAME)
+all: $(PROGRAM)
+$(PROGRAM): $(OBJ)
+	ar rc $(PROGRAM) $^
+	ranlib $(PROGRAM)
 
-%.o:%.c
-	gcc -Wall -Wextra -Werror -c $<
+%.o: %.c
+	$(CC) $(CFLAGS) -g -MD -c $<
+include $(wildcard *.d)
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ) *.d
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(PROGRAM)
 
 re: fclean all
+
