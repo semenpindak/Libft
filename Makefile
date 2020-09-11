@@ -11,8 +11,7 @@ ft_putchar_fd.c	ft_strdel.c	ft_strncpy.c ft_isprint.c ft_putendl.c\
 ft_strdup.c	ft_strnequ.c ft_itoa.c ft_putendl_fd.c ft_strequ.c ft_strnew.c\
 ft_memalloc.c ft_putnbr.c ft_striter.c ft_strnstr.c ft_memccpy.c\
 ft_putnbr_fd.c ft_striteri.c ft_strrchr.c\
-ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
-ft_itoa_base.c ft_atoi_base.c ft_strlcpy.c ft_strcasecmp.c ft_convert_base.c\
+ft_itoa_base.c ft_atoi_base.c ft_strcasecmp.c ft_convert_base.c\
 get_next_line.c
 OBJ = $(SRCS:c=o)
 
