@@ -1,7 +1,8 @@
 # Libft
 
-![Standard](https://img.shields.io/badge/standard-ANSI%20C89-lightgrey.svg)
+![Standard](https://img.shields.io/badge/standart-ANSI%20C11-lightgrey.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Score](https://img.shields.io/badge/score-125%2F125-green.svg)
 
 ## Table of Content
 
