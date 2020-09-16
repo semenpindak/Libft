@@ -17,6 +17,15 @@ This is an author's copy of the popular functions of the C library for use in ed
 
 ## Functions <a name="functions"></a>
 
+For the sake of keeping everything neat and in order, I separated the functions'
+declarations into different header files, corresponding to the behavior of
+such functions.
+For instance, ft_strlen can be found in ft_string.h.
+Also, some of the functions included don't exist in the Standard C Library,
+but I still kept them defined by there behavior.
+For example, ft_strnew can also be in ft_string.h.
+
+
 Libc functions | Additional functions | Personal Functions
 :----------- | :-----------: | :-----------:
 memset		| ft_memalloc	| ft_atoi_base
