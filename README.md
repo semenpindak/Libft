@@ -23,7 +23,7 @@ memset		| ft_memalloc	| ft_atoi_base
 bzero		| ft_memdel		| ft_itoa_base
 memcpy		| ft_strnew		| ft_convert_base
 memccpy		| ft_strdel		| ft_srtcasecmp
-memmove		| ft_strclr		|
+memmove		| ft_strclr		| ft_sqrt
 memchr		| ft_striter	|
 memcmp		| ft_striteri	|
 strlen		| ft_strmap		|
