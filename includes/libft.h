@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/16 22:26:13 by oem              ###   ########.fr       */
+/*   Updated: 2020/09/22 16:01:37 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_node
 {
 	int				fd;
 	char			*buff;
-	struct	s_node	*next;
+	struct s_node	*next;
 }					t_node;
 
 void				*ft_memset(void *b, int c, size_t len);
