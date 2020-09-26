@@ -6,13 +6,13 @@
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2020/09/22 16:01:37 by calpha           ###   ########.fr       */
+/*   Updated: 2020/09/25 12:37:58 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 10
+# define BUFF_SIZE 1
 # define FD 10240
 # include <stdlib.h>
 # include <unistd.h>
