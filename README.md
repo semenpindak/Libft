@@ -19,34 +19,35 @@ This is an author's copy of the popular functions of the C library for use in ed
 ## Functions <a name="functions"></a>
 
 Libc functions | Additional functions | Personal Functions
-:----------- | :-----------: | :-----------:
-memset		| ft_memalloc	| ft_atoi_base
-bzero		| ft_memdel		| ft_itoa_base
-memcpy		| ft_strnew		| ft_convert_base
-memccpy		| ft_strdel		| ft_srtcasecmp
-memmove		| ft_strclr		| ft_sqrt
-memchr		| ft_striter	|
-memcmp		| ft_striteri	|
-strlen		| ft_strmap		|
-strdup		| ft_strmapi	|
-strcpy		| ft_strequ		|
-strncpy		| ft_strnequ	|
-strcat		| ft_strsub		|
-strlcat		| ft_strjoin	|
-strchr		| ft_strtrim	|
-strrchr		| ft_strsplit	|
-strstr		| ft_itoa		|
-strnstr		| ft_putchar	|
-strcmp		| ft_putstr		|
-strncmp		| ft_putendl	|
-atoi		| ft_putnbr		|
-isalpha		| ft_putchar_fd	|
-isdigit		| ft_putstr_fd	|
-isalnum		| ft_putendl_fd	|
-isascii		| ft_putnbr_fd	|
-isprint		|
-toupper		|
-tolower		|
+:--------------| :-------------------:| :----------------:
+memset		   | ft_memalloc		  | ft_atoi_base
+bzero		   | ft_memdel	 		  | ft_itoa_base
+memcpy		   | ft_strnew			  | ft_convert_base
+memccpy		   | ft_strdel			  | ft_srtcasecmp
+memmove		   | ft_strclr			  | ft_sqrt
+memchr		   | ft_striter			  |
+memcmp		   | ft_striteri		  |
+strlen		   | ft_strmap			  |
+strdup		   | ft_strmapi			  |
+strcpy		   | ft_strequ			  |
+strncpy		   | ft_strnequ			  |
+strcat		   | ft_strsub			  |
+strlcat		   | ft_strjoin			  |
+strchr		   | ft_strtrim			  |
+strrchr		   | ft_strsplit		  |
+strstr		   | ft_itoa			  |
+strnstr		   | ft_putchar			  |
+strcmp		   | ft_putstr			  |
+strncmp		   | ft_putendl			  |
+atoi		   | ft_putnbr			  |
+isalpha		   | ft_putchar_fd		  |
+isdigit		   | ft_putstr_fd		  |
+isalnum		   | ft_putendl_fd		  |
+isascii		   | ft_putnbr_fd		  |
+isprint		   |
+toupper		   |
+tolower		   |
+printf		   |
 
 ## Setup <a name="setup"></a>
 
