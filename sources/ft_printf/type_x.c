@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flag_null.c                                        :+:      :+:    :+:   */
+/*   type_x.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/06 17:18:14 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/09 20:10:39 by oem              ###   ########.fr       */
+/*   Created: 2020/10/21 22:45:20 by oem               #+#    #+#             */
+/*   Updated: 2020/10/21 23:00:53 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*flag_null(char *s, int i)
+int	type_x(va_list args, char **s)
 {
-	if (s[i] == '.')
-		i--;
-	s[i] += 1;
-	return (s);
+	char *str;
+	int n;
+
+	n = va_arg(args, int);
+	str = ft_lltoa_base(n, 16);
+	if (**s == 'x')
+		return (ft_putstr(ft_strlowcase(str)));
+	return (ft_putstr(str));
 }

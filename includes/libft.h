@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/15 21:41:58 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/31 14:10:08 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <fcntl.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
+
+#include <stdio.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -66,17 +68,20 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
-void				ft_putchar(char c);
-void				ft_putstr(char const *s);
+int					ft_putchar(char c);
+int					ft_putstr(char const *s);
+int					ft_putnstr(char const *s, size_t len);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char const *s, int fd);
+int					ft_putchar_fd(char c, int fd);
+int					ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_strcasecmp(const char *s1, const char *s2);
 char				*ft_itoa_base(int value, int base);
+char				*ft_lltoa_base(long long value, int base);
 int					ft_atoi_base(char *str, char *base);
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
 int					ft_sqrt(int nb);
+char				*ft_strlowcase(char *str);
 #endif

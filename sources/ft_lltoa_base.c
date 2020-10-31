@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_lltoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/18 14:33:49 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/21 22:30:27 by oem              ###   ########.fr       */
+/*   Created: 2020/10/21 22:30:15 by oem               #+#    #+#             */
+/*   Updated: 2020/10/21 23:31:26 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **A number with a different base can only be positive.
 */
 
-static int	digit_capacity(int value, int base)
+static int	digit_capacity(long long value, int base)
 {
 	int i;
 
@@ -31,7 +31,7 @@ static int	digit_capacity(int value, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(int value, int base)
+char		*ft_lltoa_base(long long value, int base)
 {
 	char	*number;
 	char	*s;

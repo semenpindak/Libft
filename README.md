@@ -21,11 +21,11 @@ Libc functions | Additional functions | Personal Functions
 :--------------| :-------------------:| :----------------:
 memset		   | ft_memalloc		  | ft_atoi_base
 bzero		   | ft_memdel	 		  | ft_itoa_base
-memcpy		   | ft_strnew			  | ft_convert_base
-memccpy		   | ft_strdel			  | ft_srtcasecmp
-memmove		   | ft_strclr			  | ft_sqrt
-memchr		   | ft_striter			  |
-memcmp		   | ft_striteri		  |
+memcpy		   | ft_strnew			  | ft_lltoa_base
+memccpy		   | ft_strdel			  | ft_convert_base
+memmove		   | ft_strclr			  | ft_srtcasecmp
+memchr		   | ft_striter			  | ft_sqrt
+memcmp		   | ft_striteri		  | ft_strlowcase
 strlen		   | ft_strmap			  |
 strdup		   | ft_strmapi			  |
 strcpy		   | ft_strequ			  |

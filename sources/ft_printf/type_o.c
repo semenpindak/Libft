@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   type_o.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 15:45:31 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/10/09 20:10:39 by oem              ###   ########.fr       */
+/*   Created: 2020/10/21 23:04:23 by oem               #+#    #+#             */
+/*   Updated: 2020/10/21 23:06:28 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_putstr_int(char const *s)
+int	type_o(va_list args)
 {
-	size_t	i;
+	char *s;
+	int n;
 
-	i = 0;
-	if (s != NULL)
-		while (s[i] != '\0')
-			ft_write(s[i++]);
-	return (i);
+	n = va_arg(args, int);
+	s = ft_lltoa_base(n, 8);
+	return (ft_putstr(s));
 }

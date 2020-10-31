@@ -3,20 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 14:33:17 by calpha            #+#    #+#             */
-/*   Updated: 2019/09/27 14:35:42 by calpha           ###   ########.fr       */
+/*   Updated: 2020/10/21 16:20:50 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+int	ft_putstr_fd(char const *s, int fd)
 {
+	int n;
+
+	n = 0;
 	if (s)
 	{
 		while (*s != '\0')
-			write(fd, s++, 1);
+			n += write(fd, s++, 1);
 	}
+	return (n);
 }

@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_write.c                                         :+:      :+:    :+:   */
+/*   type_u.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 17:17:43 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/10/09 20:10:39 by oem              ###   ########.fr       */
+/*   Created: 2020/10/21 22:33:29 by oem               #+#    #+#             */
+/*   Updated: 2020/10/21 22:42:24 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_write(unsigned char str)
+int	type_u(va_list args)
 {
-	write(1, &str, 1);
-	return (1);
+	char *s;
+	unsigned int n;
+
+	n = va_arg(args, unsigned int);
+	s = ft_lltoa_base(n, 10);
+	return (ft_putstr(s));
 }
