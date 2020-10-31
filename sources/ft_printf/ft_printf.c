@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/10/31 14:03:57 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/31 14:22:58 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int define_format_specifier(const char **s, va_list args)
 			f.width = number(s);
 		if (**s == '.')
 		{
-			f.point = 1;
+			f.dot = 1;
 			(*s)++;
 			if (NUMBER(**s) == 1)
 				f.precision = number(s);

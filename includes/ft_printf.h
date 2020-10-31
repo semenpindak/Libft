@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 14:54:54 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/10/31 00:39:47 by oem              ###   ########.fr       */
+/*   Updated: 2020/10/31 14:22:48 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct		s_field
 	int				sharp;
 	int				zero;
 	int				width;
-	int				point;
+	int				dot;
 	size_t			precision;
 	char			size[2];
 	char			type;
