@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/10/31 14:22:58 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/01 02:13:23 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int type_field_selection(t_field f, va_list args)
 	int n;
 
 	n = 0;
-	// if (format.type == '%')
-	// 	n = ft_putchar('%');
+	if (f.type == '%')
+		n = ft_putchar('%');
 	// if (format.type == 'd' || format.type == 'i')
 	// 	n = type_di(args);
 	// if (format.type == 'u')
@@ -35,10 +35,10 @@ int type_field_selection(t_field f, va_list args)
 	// 	n = type_o(args);
 	if (f.type == 's')
 		n = type_s(f, args);
-	// if (format.type == 'c')
-	// 	n = ft_putchar(va_arg(args, int));
-	// if (*s == 'p')
-	// 	;
+	if (f.type == 'c')
+		n = type_c(f, args);
+	if (f.type == 'p')
+		n = type_p(f, args);
 	// if (*s == 'a' || 'A')
 	// 	;
 	// if (*s == 'n')
@@ -69,9 +69,6 @@ int number(const char **s)
 
 int define_format_specifier(const char **s, va_list args)
 {
-	int n;
-
-	n = 0;
 	t_field f;
 	ft_bzero(&f, sizeof(t_field));
 	while (type_field(**s) == 0)
@@ -109,19 +106,18 @@ int define_format_specifier(const char **s, va_list args)
 		(*s)++;
 	}
 	f.type = **s;
-	// printf("%d", format.minus);
-	// printf("%d", format.plus);
-	// printf("%d", format.space);
-	// printf("%d", format.sharp);
-	// printf("%d", format.zero);
-	// printf("%d", format.width);
-	// printf("%d", format.point);
-	// printf("%d", format.precision);
-	// printf("%c%c", format.size[0], format.size[1]);
-	// printf("%c", format.type);
+	// printf("%d", f.minus);
+	// printf("%d", f.plus);
+	// printf("%d", f.space);
+	// printf("%d", f.sharp);
+	// printf("%d", f.zero);
+	// printf("%d", f.width);
+	// printf("%d", f.point);
+	// printf("%ld", f.precision);
+	// printf("%c%c", f.size[0], f.size[1]);
+	// printf("%c", f.type);
 
-	type_field_selection(f, args);
-	return (n);
+	return (type_field_selection(f, args));
 }
 
 int				ft_printf(const char *format, ...)

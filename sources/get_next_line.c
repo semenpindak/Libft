@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 14:05:54 by calpha            #+#    #+#             */
-/*   Updated: 2020/03/01 16:47:26 by calpha           ###   ########.fr       */
+/*   Updated: 2020/11/11 22:50:11 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int			get_next_line(const int fd, char **line)
 	char			*tmp;
 	int				r;
 
-	if (fd < 0 || BUFF_SIZE < 1)
+	if (!line || fd < 0 || BUFF_SIZE < 1 || read(fd, NULL, 0) == -1)
 		return (-1);
 	tmp_struct = find_and_create_new_node(fd, &head);
 	s = ft_strdup(tmp_struct->buff);
