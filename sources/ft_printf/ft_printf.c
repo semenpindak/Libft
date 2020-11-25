@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/01 02:13:23 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/25 19:35:03 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int type_field_selection(t_field f, va_list args)
 	n = 0;
 	if (f.type == '%')
 		n = ft_putchar('%');
-	// if (format.type == 'd' || format.type == 'i')
-	// 	n = type_di(args);
+	if (f.type == 'd' || f.type == 'i')
+		n = type_di(args);
 	// if (format.type == 'u')
 	// 	n = type_u(args);
 	// if (*s == 'f' || 'F')

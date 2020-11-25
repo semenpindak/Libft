@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 15:13:21 by oem               #+#    #+#             */
-/*   Updated: 2020/10/21 22:34:41 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/25 19:35:42 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ int	type_di(va_list args)
 
 	n = va_arg(args, int);
 	s = ft_itoa(n);
-	return (ft_putstr(s));
+	ft_putstr(s);
+	return (n);
 }
