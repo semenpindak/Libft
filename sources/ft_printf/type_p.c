@@ -6,51 +6,26 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 02:13:46 by oem               #+#    #+#             */
-/*   Updated: 2020/11/25 19:31:10 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/26 03:18:16 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char hex_digit(int n)
-{
-	if (n >= 0 && n < 10)
-		return (n + '0');
-	else
-		return (n - 10 + 'a');
-}
-
-char *print_address_hex(void *arg, char *s)
-{
-	unsigned long p;
-	int i;
-	int j;
-
-	p = (unsigned long)arg;
-	i = (sizeof(p) * 8) - 20;
-	s = ft_strnew(14);
-	s[0] = '0';
-	s[1] = 'x';
-	j = 2;
-	while (i >= 0)
-	{
-		s[j] = hex_digit((p >> i) & 0xf);
-		i -= 4;
-		j++;
-	}
-	return (s);
-}
-
 int	type_p(t_field f, va_list args)
 {
-	void *arg;
 	char *s;
+	char *s1;
+	unsigned long p;
 	int n;
 	int i;
 
-	arg = va_arg(args, void *);
-	s = NULL;
-	s = print_address_hex(arg, s);
+	p = (unsigned long)va_arg(args, void *);
+	s1 = ft_strlowcase(ft_lltoa_base(p, 16));
+	s = ft_strjoin("0x", s1);
+	free(s1);
+	if (f.minus == 0 && f.width == 0)
+		n = ft_putstr(s);
 	if (f.minus == 0 && f.width != 0)
 	{
 		i = ft_strlen(s);
@@ -74,5 +49,6 @@ int	type_p(t_field f, va_list args)
 				n += write(1, " ", 1);
 		}
 	}
+	free(s);
 	return (n);
 }
