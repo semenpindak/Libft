@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 18:09:28 by calpha            #+#    #+#             */
-/*   Updated: 2020/10/31 14:10:08 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/27 12:38:29 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+char				*ft_sctoa(signed char n);
+char				*ft_sitoa(short int n);
 char				*ft_itoa(int n);
 int					ft_putchar(char c);
 int					ft_putstr(char const *s);
