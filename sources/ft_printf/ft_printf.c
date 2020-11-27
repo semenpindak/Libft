@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/25 19:35:03 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/27 10:15:53 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int type_field_selection(t_field f, va_list args)
 	if (f.type == '%')
 		n = ft_putchar('%');
 	if (f.type == 'd' || f.type == 'i')
-		n = type_di(args);
+		n = type_di(f, args);
 	// if (format.type == 'u')
 	// 	n = type_u(args);
 	// if (*s == 'f' || 'F')
@@ -29,8 +29,10 @@ int type_field_selection(t_field f, va_list args)
 	// 	;
 	// if (*s == 'g' || 'G')
 	// 	;
-	// if (format.type == 'x' || format.type == 'X')
-	// 	n = type_x(args, s);
+	// if (f.type == 'x')
+	// 	n = type_x(f, args);
+	// if (f.type == 'X')
+	// 	n = type_x(f, args);
 	// if (format.type == 'o')
 	// 	n = type_o(args);
 	if (f.type == 's')
@@ -98,10 +100,10 @@ int define_format_specifier(const char **s, va_list args)
 		{
 			f.size[0] = **s;
 			(*s)++;
-				if (SIZE(**s) == 1)
-					f.size[1] = **s;
-				else
-					(*s)--;
+			if (SIZE(**s) == 1)
+				f.size[1] = **s;
+			else
+				(*s)--;
 		}
 		(*s)++;
 	}
@@ -114,7 +116,7 @@ int define_format_specifier(const char **s, va_list args)
 	// printf("%d", f.width);
 	// printf("%d", f.point);
 	// printf("%ld", f.precision);
-	// printf("%c%c", f.size[0], f.size[1]);
+	// printf("%s", f.size);
 	// printf("%c", f.type);
 
 	return (type_field_selection(f, args));
