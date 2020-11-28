@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 15:13:21 by oem               #+#    #+#             */
-/*   Updated: 2020/11/27 18:06:15 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/28 03:36:14 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,7 +225,7 @@ int	type_di(t_field f, va_list args)
 	}
 	if ((f.minus == 1 || f.plus == 1 || f.space == 1 || f.zero == 1) && f.width != 0 && (f.dot == 1 || f.precision != 0))
 	{
-		
+
 	}
 
 	return (n);
