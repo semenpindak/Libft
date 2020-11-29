@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/27 10:15:53 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/29 17:47:25 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int type_field_selection(t_field f, va_list args)
 		n = type_di(f, args);
 	// if (format.type == 'u')
 	// 	n = type_u(args);
-	// if (*s == 'f' || 'F')
-	// 	;
+	if (f.type == 'f' || f.type == 'F')
+		n = type_f(f, args);
 	// if (*s == 'e' || 'E')
 	// 	;
 	// if (*s == 'g' || 'G')

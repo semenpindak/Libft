@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 14:54:54 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/27 10:15:38 by oem              ###   ########.fr       */
+/*   Updated: 2020/11/29 17:42:03 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int					ft_printf(const char *format, ...);
 
 int					type_di(t_field f, va_list args);
 int					type_u(va_list args);
+int					type_f(t_field f, va_list args);
 int					type_x(t_field f, va_list args);
 int					type_o(va_list args);
 int					type_s(t_field format, va_list args);
