@@ -6,7 +6,7 @@
 /*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 14:54:54 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/29 17:42:03 by oem              ###   ########.fr       */
+/*   Updated: 2020/12/03 03:34:40 by oem              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 # define NUMBER(c) (c >= '0' && c <= '9')
 # define SIZE(c) (c == 'l' || c == 'h' || c == 'j' || c == 'z' || c == 'L')
+# define MAXDIG 50
+# define BASE 10
 
 typedef struct		s_field
 {
@@ -36,6 +38,12 @@ typedef struct		s_field
 	//type
 	char			type;
 }					t_field;
+
+typedef union		u_value
+{
+	int64_t			i;
+	double			d;
+}					t_value;
 
 int					ft_printf(const char *format, ...);
 
