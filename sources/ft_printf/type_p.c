@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   type_p.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 02:13:46 by oem               #+#    #+#             */
-/*   Updated: 2020/11/26 03:18:16 by oem              ###   ########.fr       */
+/*   Updated: 2020/12/05 17:32:25 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	type_p(t_field f, va_list args)
 	char *s1;
 	unsigned long p;
 	int n;
-	int i;
+	size_t i;
 
 	p = (unsigned long)va_arg(args, void *);
 	s1 = ft_strlowcase(ft_lltoa_base(p, 16));

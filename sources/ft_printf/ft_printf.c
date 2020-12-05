@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:47:19 by ogeonosi          #+#    #+#             */
-/*   Updated: 2020/11/29 17:47:25 by oem              ###   ########.fr       */
+/*   Updated: 2020/12/05 13:43:40 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int type_field_selection(t_field f, va_list args)
 
 	n = 0;
 	if (f.type == '%')
-		n = ft_putchar('%');
+		n = type_pc(f);
 	if (f.type == 'd' || f.type == 'i')
 		n = type_di(f, args);
 	// if (format.type == 'u')

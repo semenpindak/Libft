@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oem <oem@student.42.fr>                    +#+  +:+       +#+         #
+#    By: calpha <calpha@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/16 19:50:03 by oem               #+#    #+#              #
-#    Updated: 2020/10/31 15:42:50 by oem              ###   ########.fr        #
+#    Updated: 2020/12/05 13:12:09 by calpha           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= libft.a
+# NAME	:= libft.a
+NAME	:= libftprintf.a
 
 INC_DIR := includes
 SRC_DIR := sources

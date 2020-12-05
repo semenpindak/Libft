@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   type_c.c                                           :+:      :+:    :+:   */
+/*   type_pc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 17:03:55 by oem               #+#    #+#             */
-/*   Updated: 2020/12/05 13:34:56 by calpha           ###   ########.fr       */
+/*   Created: 2020/12/05 13:40:19 by calpha            #+#    #+#             */
+/*   Updated: 2020/12/05 14:17:06 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	type_c(t_field f, va_list args)
+int	type_pc(t_field f)
 {
-	char	arg;
-	int		n;
+	int n;
 
 	n = 0;
-	arg = va_arg(args, int);
 	if ((f.minus == 0 || f.minus == 1) && f.width == 0)
-		return (write(1, &arg, 1));
+		return (ft_putchar('%'));
 	else if (f.minus == 0 && f.width != 0)
 	{
 		f.width--;
 		while (f.width--)
-			n += write(1, " ", 1);
-		n += write(1, &arg, 1);
+			n += f.zero == 0 ? write(1, " ", 1) : write(1, "0", 1);
+		n += ft_putchar('%');
 	}
 	else if (f.minus == 1 && f.width != 0)
 	{
-		n += write(1, &arg, 1);
+		n += ft_putchar('%');
 		f.width--;
 		while (f.width--)
 			n += write(1, " ", 1);

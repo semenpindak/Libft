@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   type_f.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oem <oem@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: calpha <calpha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 17:40:28 by oem               #+#    #+#             */
-/*   Updated: 2020/12/03 17:41:03 by oem              ###   ########.fr       */
+/*   Updated: 2020/12/05 17:31:59 by calpha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -347,7 +347,7 @@ int	type_f(t_field f, va_list args)
 
 
 
-    printf("\n%d\n", f.width);
+    printf("\n%zu\n", f.width);
     // printf("%.20f\n", value.d);
     return (n);
 }
